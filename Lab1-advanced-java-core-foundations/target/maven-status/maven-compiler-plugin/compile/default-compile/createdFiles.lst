@@ -1,0 +1,16 @@
+com\iro\labs\inventory\model\Electronics.class
+com\iro\labs\banking\model\Account.class
+com\iro\labs\banking\exception\DataAccessException.class
+com\iro\labs\banking\exception\InsufficientFundsException.class
+com\iro\labs\banking\processor\CsvTransactionProcessor.class
+com\iro\labs\inventory\store\WarehouseStore.class
+com\iro\labs\banking\exception\FraudDetectedException.class
+com\iro\labs\banking\exception\TransactionException.class
+com\iro\labs\banking\service\TransactionService.class
+com\iro\labs\inventory\model\Category.class
+com\iro\labs\banking\model\ParseError.class
+com\iro\labs\banking\service\DatabaseService.class
+com\iro\labs\inventory\model\Product.class
+com\iro\labs\inventory\demo\MainDemo.class
+com\iro\labs\banking\BankingDemo.class
+com\iro\labs\inventory\comparator\ProductComparator.class
