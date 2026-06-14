@@ -127,7 +127,7 @@ assertEquals("Invalid account identifier", cause.getMessage());
 ### Exercise 1.6 - CSV Processing with Try-With-Resources**
 **Design:**
 
-- try-with-resources ensures BufferedReader is closed
+- ```try-with-resources``` ensures BufferedReader is closed
 
 - Malformed lines do NOT abort processing
 
@@ -145,9 +145,9 @@ A stock exchange needs a concurrent order book where multiple buyers and sellers
 ### Exercise 1.7 - Thread-Safe Order Book**
 - Thread safety implementation:
 
-- ReentrantLock locks both addOrder() and matchOrders()
+- ```ReentrantLock``` locks both ``addOrder()``` and ```matchOrders()```
 
-- Mutable remainingQuantity preserves order identity
+- Mutable ```remainingQuantity``` preserves order identity
 
 - 10 buyer threads + 10 seller threads
 
