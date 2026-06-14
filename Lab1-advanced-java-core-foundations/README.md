@@ -9,8 +9,8 @@ This project simulates three real-world backend systems to practice:
 - Concurrent order matching for trading systems
 - Performance-aware collection choices
 - Production-grade logging and exception chaining
-
-Each scenario mirrors an industry problem that a backend Java engineer would solve in retail, fintech, or trading domains.
+  
+This project implements type-safe inventory tracking, robust banking error handling, and concurrent order matching.
 
 ---
 
