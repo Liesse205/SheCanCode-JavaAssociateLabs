@@ -81,8 +81,8 @@ public static final Comparator<Product> BY_CATEGORY_THEN_PRICE_DESC =
 ```
 Handles null prices by placing them at the end of the sorted list.
 
-**Scenario 2: Banking Transaction Processor**
-**Problem**
+## Scenario 2: Banking Transaction Processor
+### Problem
 A banking system needs to process money transfers with proper error handling, preserve root causes when wrapping exceptions, and log transaction context for debugging. Failed CSV transactions should not abort the entire batch.
 
 **Exercise 1.4 - Custom Exception Hierarchy**
@@ -138,8 +138,8 @@ assertEquals("Invalid account identifier", cause.getMessage());
 Processed: 5, Failed: 3
 Wrote 3 errors to: logs/failed_transactions.csv
 ```
-**Scenario 3: Real-Time Order Matching Engine**
-**Problem**
+## Scenario 3: Real-Time Order Matching Engine
+### Problem
 A stock exchange needs a concurrent order book where multiple buyers and sellers can submit orders simultaneously without race conditions or lost orders. The system must measure matching throughput.
 
 **Exercise 1.7 - Thread-Safe Order Book**
