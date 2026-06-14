@@ -1,4 +1,0 @@
--------------------------------------------------------------------------------
-Test set: com.iro.labs.matching.engine.OrderBookTest
--------------------------------------------------------------------------------
-Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.044 s - in com.iro.labs.matching.engine.OrderBookTest
