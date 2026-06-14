@@ -55,7 +55,7 @@ public enum Category {
 ```
 Benefits: compile-time validation, IDE autocomplete, refactoring safety.
 
-**Exercise 1.2 - Collections Benchmark**
+### Exercise 1.2 - Collections Benchmark**
 **Observational comparison (not formal JMH benchmark):**
 
 Collection	Insert Performance	Lookup Performance	Iteration	Best Use Case
@@ -72,7 +72,7 @@ TreeSet	Slower (log n)	O(log n)	Sorted	Sorted unique elements
 
 - Automatic duplicate elimination
 
-**Exercise 1.3 - Custom Comparator Chain**
+### Exercise 1.3 - Custom Comparator Chain**
 ```java
 public static final Comparator<Product> BY_CATEGORY_THEN_PRICE_DESC =
     Comparator.comparing(Product::getCategory)
@@ -85,7 +85,7 @@ Handles null prices by placing them at the end of the sorted list.
 ### Problem
 A banking system needs to process money transfers with proper error handling, preserve root causes when wrapping exceptions, and log transaction context for debugging. Failed CSV transactions should not abort the entire batch.
 
-**Exercise 1.4 - Custom Exception Hierarchy**
+### Exercise 1.4 - Custom Exception Hierarchy**
 Exception Structure:
 ```
 TransactionException (checked)
@@ -100,7 +100,7 @@ throw new InsufficientFundsException(
 );
 // Message becomes: "[INSF_001] Insufficient funds..."
 ```
-**Exercise 1.5 - Exception Chaining with MDC**
+### Exercise 1.5 - Exception Chaining with MDC**
 ```java
 String transactionId = UUID.randomUUID().toString();
 MDC.put("transactionId", transactionId);
@@ -124,7 +124,7 @@ assertTrue(exception.getCause() instanceof SQLException);
 SQLException cause = (SQLException) exception.getCause();
 assertEquals("Invalid account identifier", cause.getMessage());
 ```
-**Exercise 1.6 - CSV Processing with Try-With-Resources**
+### Exercise 1.6 - CSV Processing with Try-With-Resources**
 **Design:**
 
 - try-with-resources ensures BufferedReader is closed
@@ -142,7 +142,7 @@ Wrote 3 errors to: logs/failed_transactions.csv
 ### Problem
 A stock exchange needs a concurrent order book where multiple buyers and sellers can submit orders simultaneously without race conditions or lost orders. The system must measure matching throughput.
 
-**Exercise 1.7 - Thread-Safe Order Book**
+### Exercise 1.7 - Thread-Safe Order Book**
 - Thread safety implementation:
 
 - ReentrantLock locks both addOrder() and matchOrders()
@@ -175,7 +175,7 @@ if (order.isFilled()) {
     queue.poll();
 }
 ```
-**Exercise 1.8 - ExecutorService Orchestration**
+### Exercise 1.8 - ExecutorService Orchestration**
 **Thread pool size:**
 ```java
 int availableProcessors = Runtime.getRuntime().availableProcessors();
