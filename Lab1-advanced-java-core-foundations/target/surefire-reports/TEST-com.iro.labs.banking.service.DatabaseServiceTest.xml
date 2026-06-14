@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.iro.labs.banking.service.DatabaseServiceTest" time="0.448" tests="2" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.iro.labs.banking.service.DatabaseServiceTest" time="0.442" tests="2" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="25"/>
     <property name="sun.cpu.isalist" value="amd64"/>
@@ -15,7 +15,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="US"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Eclipse Adoptium\jdk-25.0.3.9-hotspot\bin"/>
-    <property name="sun.java.command" value="C:\Users\C_S\AppData\Local\Temp\surefire1262423158699602870\surefirebooter-20260614182943301_3.jar C:\Users\C_S\AppData\Local\Temp\surefire1262423158699602870 2026-06-14T18-29-42_581-jvmRun1 surefire-20260614182943301_1tmp surefire_0-20260614182943301_2tmp"/>
+    <property name="sun.java.command" value="C:\Users\C_S\AppData\Local\Temp\surefire12358296286177978209\surefirebooter-20260614194139960_3.jar C:\Users\C_S\AppData\Local\Temp\surefire12358296286177978209 2026-06-14T19-41-39_316-jvmRun1 surefire-20260614194139960_1tmp surefire_0-20260614194139960_2tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="C:\Users\C_S\Desktop\SheCanCode-JavaAssociateLabs\Lab1-advanced-java-core-foundations\target\test-classes;C:\Users\C_S\Desktop\SheCanCode-JavaAssociateLabs\Lab1-advanced-java-core-foundations\target\classes;C:\Users\C_S\.m2\repository\org\junit\jupiter\junit-jupiter\5.10.0\junit-jupiter-5.10.0.jar;C:\Users\C_S\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.10.0\junit-jupiter-api-5.10.0.jar;C:\Users\C_S\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;C:\Users\C_S\.m2\repository\org\junit\platform\junit-platform-commons\1.10.0\junit-platform-commons-1.10.0.jar;C:\Users\C_S\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\C_S\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.10.0\junit-jupiter-params-5.10.0.jar;C:\Users\C_S\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.10.0\junit-jupiter-engine-5.10.0.jar;C:\Users\C_S\.m2\repository\org\junit\platform\junit-platform-engine\1.10.0\junit-platform-engine-1.10.0.jar;C:\Users\C_S\.m2\repository\org\slf4j\slf4j-api\2.0.9\slf4j-api-2.0.9.jar;C:\Users\C_S\.m2\repository\ch\qos\logback\logback-classic\1.4.11\logback-classic-1.4.11.jar;C:\Users\C_S\.m2\repository\ch\qos\logback\logback-core\1.4.11\logback-core-1.4.11.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -30,7 +30,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\C_S\AppData\Local\Temp\surefire1262423158699602870\surefirebooter-20260614182943301_3.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\C_S\AppData\Local\Temp\surefire12358296286177978209\surefirebooter-20260614194139960_3.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="25.0.3+9-LTS"/>
@@ -60,9 +60,9 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="69.0"/>
   </properties>
-  <testcase name="testGetCauseReturnsOriginalSQLException" classname="com.iro.labs.banking.service.DatabaseServiceTest" time="0.397">
-    <system-out><![CDATA[2026-06-14 18:29:44.700 [main] DEBUG c.i.l.b.service.DatabaseService - Fetching balance for account: 
-2026-06-14 18:29:44.707 [main] ERROR c.i.l.b.service.DatabaseService - Database error while fetching balance for account: 
+  <testcase name="testGetCauseReturnsOriginalSQLException" classname="com.iro.labs.banking.service.DatabaseServiceTest" time="0.392">
+    <system-out><![CDATA[2026-06-14 19:41:41.311 [main] DEBUG c.i.l.b.service.DatabaseService - Fetching balance for account: 
+2026-06-14 19:41:41.316 [main] ERROR c.i.l.b.service.DatabaseService - Database error while fetching balance for account: 
 java.sql.SQLException: Invalid account identifier
 	at com.iro.labs.banking.service.DatabaseService.simulateDatabaseAccess(DatabaseService.java:48)
 	at com.iro.labs.banking.service.DatabaseService.getBalanceFromDatabase(DatabaseService.java:32)
@@ -142,8 +142,8 @@ java.sql.SQLException: Invalid account identifier
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:581)
 ]]></system-out>
   </testcase>
-  <testcase name="testGetBalanceFromDatabase_Success" classname="com.iro.labs.banking.service.DatabaseServiceTest" time="0.003">
-    <system-out><![CDATA[2026-06-14 18:29:44.735 [main] DEBUG c.i.l.b.service.DatabaseService - Fetching balance for account: b505da30-13bb-40c1-a52d-c21fdd02d3a2
+  <testcase name="testGetBalanceFromDatabase_Success" classname="com.iro.labs.banking.service.DatabaseServiceTest" time="0.005">
+    <system-out><![CDATA[2026-06-14 19:41:41.344 [main] DEBUG c.i.l.b.service.DatabaseService - Fetching balance for account: c7c7c094-1ac6-4963-aa43-f82fff464a1d
 ]]></system-out>
   </testcase>
 </testsuite>

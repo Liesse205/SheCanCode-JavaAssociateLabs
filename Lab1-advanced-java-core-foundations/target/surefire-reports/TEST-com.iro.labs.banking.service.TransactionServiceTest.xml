@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.iro.labs.banking.service.TransactionServiceTest" time="0.053" tests="5" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.iro.labs.banking.service.TransactionServiceTest" time="0.036" tests="5" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="25"/>
     <property name="sun.cpu.isalist" value="amd64"/>
@@ -15,7 +15,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="US"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Eclipse Adoptium\jdk-25.0.3.9-hotspot\bin"/>
-    <property name="sun.java.command" value="C:\Users\C_S\AppData\Local\Temp\surefire1262423158699602870\surefirebooter-20260614182943301_3.jar C:\Users\C_S\AppData\Local\Temp\surefire1262423158699602870 2026-06-14T18-29-42_581-jvmRun1 surefire-20260614182943301_1tmp surefire_0-20260614182943301_2tmp"/>
+    <property name="sun.java.command" value="C:\Users\C_S\AppData\Local\Temp\surefire12358296286177978209\surefirebooter-20260614194139960_3.jar C:\Users\C_S\AppData\Local\Temp\surefire12358296286177978209 2026-06-14T19-41-39_316-jvmRun1 surefire-20260614194139960_1tmp surefire_0-20260614194139960_2tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="C:\Users\C_S\Desktop\SheCanCode-JavaAssociateLabs\Lab1-advanced-java-core-foundations\target\test-classes;C:\Users\C_S\Desktop\SheCanCode-JavaAssociateLabs\Lab1-advanced-java-core-foundations\target\classes;C:\Users\C_S\.m2\repository\org\junit\jupiter\junit-jupiter\5.10.0\junit-jupiter-5.10.0.jar;C:\Users\C_S\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.10.0\junit-jupiter-api-5.10.0.jar;C:\Users\C_S\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;C:\Users\C_S\.m2\repository\org\junit\platform\junit-platform-commons\1.10.0\junit-platform-commons-1.10.0.jar;C:\Users\C_S\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\C_S\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.10.0\junit-jupiter-params-5.10.0.jar;C:\Users\C_S\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.10.0\junit-jupiter-engine-5.10.0.jar;C:\Users\C_S\.m2\repository\org\junit\platform\junit-platform-engine\1.10.0\junit-platform-engine-1.10.0.jar;C:\Users\C_S\.m2\repository\org\slf4j\slf4j-api\2.0.9\slf4j-api-2.0.9.jar;C:\Users\C_S\.m2\repository\ch\qos\logback\logback-classic\1.4.11\logback-classic-1.4.11.jar;C:\Users\C_S\.m2\repository\ch\qos\logback\logback-core\1.4.11\logback-core-1.4.11.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -30,7 +30,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\C_S\AppData\Local\Temp\surefire1262423158699602870\surefirebooter-20260614182943301_3.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\C_S\AppData\Local\Temp\surefire12358296286177978209\surefirebooter-20260614194139960_3.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="25.0.3+9-LTS"/>
@@ -60,22 +60,22 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="69.0"/>
   </properties>
-  <testcase name="testNegativeAmountThrowsException" classname="com.iro.labs.banking.service.TransactionServiceTest" time="0.008"/>
-  <testcase name="testFraudSuspectedFromAccountThrowsException" classname="com.iro.labs.banking.service.TransactionServiceTest" time="0.006">
-    <system-out><![CDATA[2026-06-14 18:29:44.779 [main] DEBUG c.i.l.b.service.TransactionService - Processing transfer from ACC001 to ACC002 for amount 100.00
+  <testcase name="testNegativeAmountThrowsException" classname="com.iro.labs.banking.service.TransactionServiceTest" time="0.01"/>
+  <testcase name="testFraudSuspectedFromAccountThrowsException" classname="com.iro.labs.banking.service.TransactionServiceTest" time="0.004">
+    <system-out><![CDATA[2026-06-14 19:41:41.382 [main] DEBUG c.i.l.b.service.TransactionService - Processing transfer from ACC001 to ACC002 for amount 100.00
 ]]></system-out>
   </testcase>
-  <testcase name="testInsufficientFundsThrowsException" classname="com.iro.labs.banking.service.TransactionServiceTest" time="0.007">
-    <system-out><![CDATA[2026-06-14 18:29:44.787 [main] DEBUG c.i.l.b.service.TransactionService - Processing transfer from ACC001 to ACC002 for amount 2000.00
+  <testcase name="testInsufficientFundsThrowsException" classname="com.iro.labs.banking.service.TransactionServiceTest" time="0.005">
+    <system-out><![CDATA[2026-06-14 19:41:41.387 [main] DEBUG c.i.l.b.service.TransactionService - Processing transfer from ACC001 to ACC002 for amount 2000.00
 ]]></system-out>
   </testcase>
-  <testcase name="testFraudSuspectedToAccountThrowsException" classname="com.iro.labs.banking.service.TransactionServiceTest" time="0.005">
-    <system-out><![CDATA[2026-06-14 18:29:44.797 [main] DEBUG c.i.l.b.service.TransactionService - Processing transfer from ACC001 to ACC002 for amount 100.00
+  <testcase name="testFraudSuspectedToAccountThrowsException" classname="com.iro.labs.banking.service.TransactionServiceTest" time="0.003">
+    <system-out><![CDATA[2026-06-14 19:41:41.394 [main] DEBUG c.i.l.b.service.TransactionService - Processing transfer from ACC001 to ACC002 for amount 100.00
 ]]></system-out>
   </testcase>
-  <testcase name="testSuccessfulTransfer" classname="com.iro.labs.banking.service.TransactionServiceTest" time="0.007">
-    <system-out><![CDATA[2026-06-14 18:29:44.802 [main] DEBUG c.i.l.b.service.TransactionService - Processing transfer from ACC001 to ACC002 for amount 200.00
-2026-06-14 18:29:44.804 [main] INFO  c.i.l.b.service.TransactionService - Transfer completed. From: ACC001, To: ACC002, Amount: 200.00
+  <testcase name="testSuccessfulTransfer" classname="com.iro.labs.banking.service.TransactionServiceTest" time="0.004">
+    <system-out><![CDATA[2026-06-14 19:41:41.399 [main] DEBUG c.i.l.b.service.TransactionService - Processing transfer from ACC001 to ACC002 for amount 200.00
+2026-06-14 19:41:41.400 [main] INFO  c.i.l.b.service.TransactionService - Transfer completed. From: ACC001, To: ACC002, Amount: 200.00
 ]]></system-out>
   </testcase>
 </testsuite>

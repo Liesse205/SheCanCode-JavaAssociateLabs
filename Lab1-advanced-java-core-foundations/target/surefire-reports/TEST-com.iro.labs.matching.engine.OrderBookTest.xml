@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.iro.labs.inventory.store.WarehouseStoreTest" time="0.045" tests="5" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.iro.labs.matching.engine.OrderBookTest" time="0.044" tests="5" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="25"/>
     <property name="sun.cpu.isalist" value="amd64"/>
@@ -60,24 +60,31 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="69.0"/>
   </properties>
-  <testcase name="testAddItem" classname="com.iro.labs.inventory.store.WarehouseStoreTest" time="0.006">
-    <system-out><![CDATA[2026-06-14 19:41:41.415 [main] DEBUG c.i.l.inventory.store.WarehouseStore - Added item: 2b8671ef-7d9b-4b26-a68a-00a966880fb5
+  <testcase name="testAddOrder" classname="com.iro.labs.matching.engine.OrderBookTest" time="0.007">
+    <system-out><![CDATA[2026-06-14 19:41:41.468 [main] DEBUG c.iro.labs.matching.engine.OrderBook - Added BUY order: e27d541d
 ]]></system-out>
   </testcase>
-  <testcase name="testFindById" classname="com.iro.labs.inventory.store.WarehouseStoreTest" time="0.005">
-    <system-out><![CDATA[2026-06-14 19:41:41.423 [main] DEBUG c.i.l.inventory.store.WarehouseStore - Added item: 61d9335f-91f5-487e-8c98-9dacb314709f
+  <testcase name="testNoMatchWhenBuyPriceLowerThanSellPrice" classname="com.iro.labs.matching.engine.OrderBookTest" time="0.005">
+    <system-out><![CDATA[2026-06-14 19:41:41.474 [main] DEBUG c.iro.labs.matching.engine.OrderBook - Added BUY order: c3c085f2
+2026-06-14 19:41:41.474 [main] DEBUG c.iro.labs.matching.engine.OrderBook - Added SELL order: fed9d968
 ]]></system-out>
   </testcase>
-  <testcase name="testFindByCategory" classname="com.iro.labs.inventory.store.WarehouseStoreTest" time="0.008">
-    <system-out><![CDATA[2026-06-14 19:41:41.432 [main] DEBUG c.i.l.inventory.store.WarehouseStore - Added item: fe1af34e-7a89-49de-b915-920760b978c9
-2026-06-14 19:41:41.433 [main] DEBUG c.i.l.inventory.store.WarehouseStore - Added item: a6c1b4c4-3b10-44aa-94e4-5fe50a7c2930
-2026-06-14 19:41:41.434 [main] DEBUG c.i.l.inventory.store.WarehouseStore - Added item: c656f31a-5e8f-4ca0-804e-f1d7334ea805
+  <testcase name="testOrderQuantityReduction" classname="com.iro.labs.matching.engine.OrderBookTest" time="0.011">
+    <system-out><![CDATA[2026-06-14 19:41:41.484 [main] DEBUG c.iro.labs.matching.engine.OrderBook - Added BUY order: 6f180eff
+2026-06-14 19:41:41.485 [main] DEBUG c.iro.labs.matching.engine.OrderBook - Added SELL order: 464591dc
+2026-06-14 19:41:41.488 [main] INFO  c.iro.labs.matching.engine.OrderBook - Match found: 50 units at price 140.00
 ]]></system-out>
   </testcase>
-  <testcase name="testRemoveItem" classname="com.iro.labs.inventory.store.WarehouseStoreTest" time="0.006">
-    <system-out><![CDATA[2026-06-14 19:41:41.441 [main] DEBUG c.i.l.inventory.store.WarehouseStore - Added item: d0317ca9-b250-4ee6-89f6-c68a99f3bbec
-2026-06-14 19:41:41.443 [main] DEBUG c.i.l.inventory.store.WarehouseStore - Removed item with id: d0317ca9-b250-4ee6-89f6-c68a99f3bbec
+  <testcase name="testMatchOrders" classname="com.iro.labs.matching.engine.OrderBookTest" time="0.005">
+    <system-out><![CDATA[2026-06-14 19:41:41.495 [main] DEBUG c.iro.labs.matching.engine.OrderBook - Added BUY order: d145ff61
+2026-06-14 19:41:41.496 [main] DEBUG c.iro.labs.matching.engine.OrderBook - Added SELL order: 373d0854
+2026-06-14 19:41:41.496 [main] INFO  c.iro.labs.matching.engine.OrderBook - Match found: 100 units at price 140.00
 ]]></system-out>
   </testcase>
-  <testcase name="testAddNullItem_ThrowsException" classname="com.iro.labs.inventory.store.WarehouseStoreTest" time="0.004"/>
+  <testcase name="testPartialMatch" classname="com.iro.labs.matching.engine.OrderBookTest" time="0.004">
+    <system-out><![CDATA[2026-06-14 19:41:41.501 [main] DEBUG c.iro.labs.matching.engine.OrderBook - Added BUY order: dc2ac14e
+2026-06-14 19:41:41.502 [main] DEBUG c.iro.labs.matching.engine.OrderBook - Added SELL order: 2634565c
+2026-06-14 19:41:41.503 [main] INFO  c.iro.labs.matching.engine.OrderBook - Match found: 50 units at price 140.00
+]]></system-out>
+  </testcase>
 </testsuite>

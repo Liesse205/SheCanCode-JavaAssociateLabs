@@ -1,3 +1,4 @@
+com\iro\labs\matching\engine\OrderBookTest.class
+com\iro\labs\inventory\store\WarehouseStoreTest.class
 com\iro\labs\banking\service\TransactionServiceTest.class
 com\iro\labs\banking\service\DatabaseServiceTest.class
-com\iro\labs\inventory\store\WarehouseStoreTest.class
