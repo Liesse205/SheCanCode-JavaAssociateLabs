@@ -20,6 +20,6 @@ public class MainDemo {
         var sorted = techStore.getAllItems();
         sorted.sort(ProductComparator.BY_CATEGORY_THEN_PRICE_DESC);
         sorted.forEach(System.out::println);
-        System.out.println("\n✅ Lab 1.1 Complete!");
+        System.out.println("\n Lab 1.1 Complete!");
     }
 }
