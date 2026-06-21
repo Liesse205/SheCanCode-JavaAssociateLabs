@@ -10,39 +10,27 @@ import java.util.stream.Collectors;
 
 public class ProductAnalytics {
 
-    /**
-     * Exercise 2.1 - Part 1 & 2:
-     * Flattens all line items from orders, filters quantity > 5,
-     * maps to revenue, and sums total revenue using reduce()
-     */
     public double calculateTotalRevenueFromLargeOrders(List<Order> orders) {
         return orders.stream()
-                .flatMap(order -> order.getLineItems().stream())  // Flatten to LineItem stream
-                .filter(item -> item.getQuantity() > 5)           // Only quantity > 5
-                .mapToDouble(LineItem::getRevenue)               // Map to revenue
-                .reduce(0.0, Double::sum);                       // Sum using reduce
+                .flatMap(order -> order.getLineItems().stream())
+                .filter(item -> item.getQuantity() > 5)
+                .mapToDouble(LineItem::getRevenue)
+                .reduce(0.0, Double::sum);
     }
 
-    /**
-     * Exercise 2.1 - Part 3:
-     * Returns top N products by total revenue using groupingBy
-     */
     public List<Map.Entry<Product, Double>> topNProductsByRevenue(List<Order> orders, int n) {
         return orders.stream()
                 .flatMap(order -> order.getLineItems().stream())
                 .collect(Collectors.groupingBy(
-                        LineItem::getProduct,                    // Group by Product
-                        Collectors.summingDouble(LineItem::getRevenue) // Sum revenue per product
+                        LineItem::getProduct,
+                        Collectors.summingDouble(LineItem::getRevenue)
                 ))
                 .entrySet().stream()
-                .sorted((e1, e2) -> Double.compare(e2.getValue(), e1.getValue())) // Sort descending
-                .limit(n)                                         // Take top N
+                .sorted((e1, e2) -> Double.compare(e2.getValue(), e1.getValue()))
+                .limit(n)
                 .collect(Collectors.toList());
     }
 
-    /**
-     * Helper method to get all line items as a flat list
-     */
     public List<LineItem> getAllLineItemsFlattened(List<Order> orders) {
         return orders.stream()
                 .flatMap(order -> order.getLineItems().stream())
