@@ -10,6 +10,8 @@ import java.util.stream.Collectors;
 
 public class ProductAnalytics {
 
+    // ===== Exercise 2.1 Methods =====
+    
     public double calculateTotalRevenueFromLargeOrders(List<Order> orders) {
         return orders.stream()
                 .flatMap(order -> order.getLineItems().stream())
@@ -34,6 +36,21 @@ public class ProductAnalytics {
     public List<LineItem> getAllLineItemsFlattened(List<Order> orders) {
         return orders.stream()
                 .flatMap(order -> order.getLineItems().stream())
+                .collect(Collectors.toList());
+    }
+
+    // ===== Exercise 2.3: Parallel Stream Version =====
+    
+    public List<Map.Entry<Product, Double>> topNProductsByRevenueParallel(List<Order> orders, int n) {
+        return orders.parallelStream()
+                .flatMap(order -> order.getLineItems().stream())
+                .collect(Collectors.groupingBy(
+                        LineItem::getProduct,
+                        Collectors.summingDouble(LineItem::getRevenue)
+                ))
+                .entrySet().parallelStream()
+                .sorted((e1, e2) -> Double.compare(e2.getValue(), e1.getValue()))
+                .limit(n)
                 .collect(Collectors.toList());
     }
 }
