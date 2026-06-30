@@ -35,13 +35,13 @@ A Spring Boot application with OAuth2 authentication (Google & GitHub) and full 
    mvn spring-boot:run
    ```
 ## API Endpoints
-**| Method | Endpoint |Description|**
-  |--------|----------|-----------|
-  | POST | /api/items | Create a new item |
-  | GET | /api/items | Get all user's items |
-  | GET | /api/items/{id} | Get a specific item |
-  | PUT | /api/items{id} | Update an item |
-  |DELETE| /api/items{id}| Delete an item |
+| Method | Endpoint |Description|
+|--------|----------|-----------|
+| POST | /api/items | Create a new item |
+| GET | /api/items | Get all user's items |
+| GET | /api/items/{id} | Get a specific item |
+| PUT | /api/items{id} | Update an item |
+|DELETE| /api/items{id}| Delete an item |
 
 ## Security
 - All API endpoints require authentication
