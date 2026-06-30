@@ -1,0 +1,21 @@
+# ============================================
+# POSTGRESQL DATABASE CONFIGURATION
+# ============================================
+spring.datasource.url=jdbc:postgresql://localhost:5432/itemdb
+spring.datasource.username=postgres
+spring.datasource.password=YOUR_DATABASE_PASSWORD_HERE
+spring.jpa.hibernate.ddl-auto=update
+spring.jpa.show-sql=true
+
+# ============================================
+# GITHUB OAUTH2 CONFIGURATION
+# ============================================
+spring.security.oauth2.client.registration.github.client-id=YOUR_GITHUB_CLIENT_ID_HERE
+spring.security.oauth2.client.registration.github.client-secret=YOUR_GITHUB_CLIENT_SECRET_HERE
+spring.security.oauth2.client.registration.github.scope=read:user,user:email
+
+# ============================================
+# GOOGLE OAUTH2 CONFIGURATION
+# ============================================
+spring.security.oauth2.client.registration.google.client-id=YOUR_GOOGLE_CLIENT_ID_HERE
+spring.security.oauth2.client.registration.google.client-secret=YOUR_GOOGLE_CLIENT_SECRET_HERE

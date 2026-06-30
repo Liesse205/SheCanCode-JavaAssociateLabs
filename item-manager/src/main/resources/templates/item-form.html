@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title th:text="${isEdit} ? 'Edit Item' : 'New Item'">Item Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background: #f0f2f5;
+    }
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    h2 { color: #333; margin-top: 0; }
+    .form-group {
+      margin-bottom: 20px;
+    }
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+      color: #555;
+    }
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      font-size: 16px;
+      box-sizing: border-box;
+    }
+    textarea {
+      height: 100px;
+      resize: vertical;
+    }
+    .form-actions {
+      display: flex;
+      gap: 10px;
+      margin-top: 20px;
+    }
+    .btn {
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 5px;
+      border: none;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    .btn-save { background: #4285f4; color: white; }
+    .btn-save:hover { background: #357ae8; }
+    .btn-cancel { background: #ddd; color: #333; }
+    .btn-cancel:hover { background: #ccc; }
+  </style>
+</head>
+<body>
+<div class="container">
+  <h2 th:text="${isEdit} ? ' Edit Item' : 'Create New Item'">Item Form</h2>
+
+  <form th:action="@{/items/save}" th:object="${item}" method="post">
+    <!-- Hidden field for item ID (only used in edit mode) -->
+    <input type="hidden" th:field="*{id}" />
+
+    <div class="form-group">
+      <label for="name">Name *</label>
+      <input type="text" th:field="*{name}" id="name" required placeholder="Enter item name" />
+    </div>
+
+    <div class="form-group">
+      <label for="description">Description</label>
+      <textarea th:field="*{description}" id="description" placeholder="Enter description (optional)"></textarea>
+    </div>
+
+    <div class="form-actions">
+      <button type="submit" class="btn btn-save"> Save</button>
+      <a href="/items" class="btn btn-cancel">Cancel</a>
+    </div>
+  </form>
+</div>
+</body>
+</html>
